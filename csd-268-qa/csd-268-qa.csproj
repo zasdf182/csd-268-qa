@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>csd_268_qa</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
@@ -14,6 +15,8 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
     <PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
+    <PackageReference Include="Selenium.Firefox.WebDriver" Version="0.27.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.27.0" />
   </ItemGroup>
 
   <ItemGroup>

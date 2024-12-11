@@ -1,3 +1,9 @@
+import unittest
+
+####################
+# ASSIGNMENT START #
+####################
+
 from unittest import TestCase
 import inspect
 
@@ -66,3 +72,10 @@ class TestLeapYear(TestCase):
         self.assertEqual(False, self.ft.leap_year(1700))
 
     # Your code ends before this line
+
+##################
+# ASSIGNMENT END #
+##################
+
+if __name__ == "__main__":
+    unittest.main()

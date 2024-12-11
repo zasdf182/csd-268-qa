@@ -10,6 +10,8 @@ using System.Text;
 public partial class Discounts
 {
     // Your code starts here
+    public const double delta = 0.0001;  // used in Assert.AreEqual
+
     [TestMethod]
     [ExpectedException(typeof(ArgumentOutOfRangeException))]
     public void TestMethod1()
@@ -58,13 +60,13 @@ public partial class Discounts
     [TestMethod]
     public void TestMethod8()
     {
-        Assert.AreEqual(90.9, GetDiscountedPrice(101));
+        Assert.AreEqual(90.9, GetDiscountedPrice(101), delta);
     }
 
     [TestMethod]
     public void TestMethod9()
     {
-        Assert.AreEqual(899.1, GetDiscountedPrice(999));
+        Assert.AreEqual(899.1, GetDiscountedPrice(999), delta);
     }
 
     [TestMethod]
@@ -76,13 +78,13 @@ public partial class Discounts
     [TestMethod]
     public void TestMethod11()
     {
-        Assert.AreEqual(800.8, GetDiscountedPrice(1001));
+        Assert.AreEqual(800.8, GetDiscountedPrice(1001), delta);
     }
 
     [TestMethod]
     public void TestMethod12()
     {
-        Assert.AreEqual(7999.2, GetDiscountedPrice(9999));
+        Assert.AreEqual(7999.2, GetDiscountedPrice(9999), delta);
     }
 
     [TestMethod]
@@ -94,7 +96,7 @@ public partial class Discounts
     [TestMethod]
     public void TestMethod14()
     {
-        Assert.AreEqual(7000.7, GetDiscountedPrice(10001));
+        Assert.AreEqual(7000.7, GetDiscountedPrice(10001), delta);
     }
 
     // Your code ends here
