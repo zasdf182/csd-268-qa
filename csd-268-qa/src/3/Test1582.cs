@@ -29,10 +29,13 @@ namespace SeleniumTests
         {
             try
             {
-                //driver.Quit();// quit does not close the window
-                driver.Close();
-                driver.Dispose();
-            } catch (Exception)
+                // Comment out to leave browser open
+                // driver.Quit(); // quit does not close the window
+                // driver.Close();
+                // driver.Dispose();
+            }
+            
+            catch (Exception)
             {
                 // Ignore errors if unable to close the browser
             }
