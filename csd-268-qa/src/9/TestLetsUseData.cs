@@ -1,16 +1,10 @@
-
 namespace TestLetsUseData;
-
-
 using System;
-using System.Net.WebSockets;
-using System.Text;
-
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
+
 
 
 
@@ -18,8 +12,9 @@ using OpenQA.Selenium.Support.UI;
 public class LetsUseDataTests
 {
     private static FirefoxDriver driver;
-    private StringBuilder verificationErrors;
-    private bool acceptNextAlert = true;
+
+
+
 
     // ##################################################################### //
     // ################################ INIT ############################### //
@@ -34,8 +29,10 @@ public class LetsUseDataTests
     [TestInitialize]
     public void InitializeTest()
     {
-        verificationErrors = new StringBuilder();
     }
+
+
+
 
     // ##################################################################### //
     // ############################## CLEANUP ############################## //
@@ -47,11 +44,10 @@ public class LetsUseDataTests
         try
         {
             // Comment out to leave browser open
-            // driver.Quit();
-            // driver.Close();
-            // driver.Dispose();
+            driver.Quit();
+            driver.Close();
+            driver.Dispose();
         }
-        
         catch (Exception)
         {
         }
@@ -60,18 +56,27 @@ public class LetsUseDataTests
     [TestCleanup]
     public void CleanupTest()
     {
-        Assert.AreEqual("", verificationErrors.ToString());
     }
+
+
+
 
     // ##################################################################### //
     // ############################### TESTS ############################### //
     // ##################################################################### //
 
+    /// <summary>
+    /// Attempts to login to https://letsusedata.com/ with credentials: <br/>
+    /// - Username: test1 <br/>
+    /// - Password: Test12456 <br/>
+    /// Should result in a successful login.
+    /// </summary>
     [TestMethod]
     public void TestLoginSuccess()
     {
         TryLogin("test1", "Test12456");
 
+        // Wait for page to load before testing assertions
         try
         {
             TimeSpan timeout = TimeSpan.FromSeconds(5);
@@ -82,14 +87,22 @@ public class LetsUseDataTests
         {
         }
         
+        // Test assertions
         string expectedUrl = "https://letsusedata.com/CourseSelection.html";
         Assert.AreEqual(expectedUrl, driver.Url);
     }
 
+    /// <summary>
+    /// Attempts to login to https://letsusedata.com/ with credentials: <br/>
+    /// - Username: test1 <br/>
+    /// - Password: test1234 <br/>
+    /// Should result in an unsuccessful login.
+    /// </summary>
     [TestMethod]
     public void TestLoginFail() {
         TryLogin("test1", "test1234");
 
+        // Wait for page to load before testing assertions
         try
         {
             TimeSpan timeout = TimeSpan.FromSeconds(5);
@@ -100,14 +113,21 @@ public class LetsUseDataTests
         {
         }
 
+        // Test assertions
         string expectedUrl = "https://letsusedata.com/";
         Assert.AreEqual(expectedUrl, driver.Url);
     }
     
+
+
+
     // ##################################################################### //
     // ########################### HELPER METHODS ########################## //
     // ##################################################################### //
 
+    /// <summary>
+    /// Click on an input element and type something in it.
+    /// </summary>
     private void TypeInput(IWebElement inputElem, string text)
     {
         inputElem.Click();
@@ -115,6 +135,9 @@ public class LetsUseDataTests
         inputElem.SendKeys(text);
     }
 
+    /// <summary>
+    /// Attempt to login to https://letsusedata.com/.
+    /// </summary>
     private void TryLogin(string username, string password) {
         driver.Navigate().GoToUrl("https://letsusedata.com");
 

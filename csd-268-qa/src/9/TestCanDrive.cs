@@ -1,11 +1,6 @@
-
 namespace TestCanDrive;
-
 using static Helper9.Age;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-
-
 
 [TestClass]
 public partial class AgeTests
