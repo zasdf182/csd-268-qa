@@ -47,9 +47,9 @@ public class LetsUseDataTests
         try
         {
             // Comment out to leave browser open
-            driver.Quit();
-            driver.Close();
-            driver.Dispose();
+            // driver.Quit();
+            // driver.Close();
+            // driver.Dispose();
         }
         
         catch (Exception)

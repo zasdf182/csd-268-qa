@@ -1,4 +1,8 @@
-namespace CreditScoreAssessment;
+namespace TestCreditScore;
+
+//////////////////////
+// ASSIGNMENT START //
+//////////////////////
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;

@@ -1,4 +1,4 @@
-namespace Helper;
+namespace Helper1;
 
 public class Math
 {

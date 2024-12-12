@@ -1,5 +1,9 @@
-namespace FindDiscountTestCases;
-using static Helper.Shop;
+namespace TestDiscount;
+using static Helper1.Shop;
+
+//////////////////////
+// ASSIGNMENT START //
+//////////////////////
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
