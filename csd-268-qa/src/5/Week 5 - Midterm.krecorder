@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>Week 5 - Midterm</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">[Selenium] Home Loan</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://www.moneyunder30.com/mortgage-calculator/<datalist><option>https://www.moneyunder30.com/mortgage-calculator/</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=fieldname23_1<datalist><option>id=fieldname23_1</option><option>name=fieldname23_1</option><option>xpath=//input[@id='fieldname23_1']</option><option>xpath=//div[@id='field_1-0']/div/input</option><option>xpath=//div/input</option><option>css=#fieldname23_1</option></datalist></td><td>$100,000.00</td>
+</tr>
+<tr><td>type</td><td>id=fieldname24_1<datalist><option>id=fieldname24_1</option><option>name=fieldname24_1</option><option>xpath=//input[@id='fieldname24_1']</option><option>xpath=//div[@id='field_1-1']/div/input</option><option>xpath=//div[2]/div/input</option><option>css=#fieldname24_1</option></datalist></td><td>$0.00</td>
+</tr>
+<tr><td>type</td><td>id=fieldname25_1<datalist><option>id=fieldname25_1</option><option>name=fieldname25_1</option><option>xpath=//input[@id='fieldname25_1']</option><option>xpath=//div[@id='field_1-2']/div/input</option><option>xpath=//div[3]/div/input</option><option>css=#fieldname25_1</option></datalist></td><td>3.50%</td>
+</tr>
+<tr><td>type</td><td>id=fieldname19_1<datalist><option>id=fieldname19_1</option><option>name=fieldname19_1</option><option>xpath=//input[@id='fieldname19_1']</option><option>xpath=//div[@id='field_1-3']/div/input</option><option>xpath=//div[4]/div/input</option><option>css=#fieldname19_1</option></datalist></td><td>30</td>
+</tr>
+<tr><td>click</td><td>id=fieldname26_1<datalist><option>id=fieldname26_1</option><option>xpath=//input[@id='fieldname26_1']</option><option>xpath=//div[@id='field_1-4']/input</option><option>xpath=//div[5]/input</option><option>css=#fieldname26_1</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=fieldname20_1<datalist><option>id=fieldname20_1</option><option>name=fieldname20_1</option><option>xpath=//input[@id='fieldname20_1']</option><option>xpath=//div[@id='field_1-6']/div/input</option><option>xpath=//div[7]/div/input</option><option>css=#fieldname20_1</option></datalist></td><td>$449.04</td>
+</tr>
+</tbody></table>
+</body>
+</html>
