@@ -1,5 +1,5 @@
-namespace TestLeapYear;
-using static Helper2.Time;
+namespace TestIsMillenial;
+using static Helper5.Generation;
 
 //////////////////////
 // ASSIGNMENT START //
@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 
 [TestClass]
-public partial class LeapTesting
+public partial class MidtermP1
 {
     // Your code starts here
 
@@ -22,14 +22,14 @@ public partial class LeapTesting
     [ExpectedException(typeof(ArgumentOutOfRangeException))]
     public void TestMethod1()
     {
-        IsLeap(int.MinValue);
+        IsMillenial(int.MinValue);
     }
 
     [TestMethod]
     [ExpectedException(typeof(ArgumentOutOfRangeException))]
     public void TestMethod2()
     {
-        IsLeap(int.MinValue + 1);
+        IsMillenial(int.MinValue + 1);
     }
 
     // ##################################################################### //
@@ -40,79 +40,64 @@ public partial class LeapTesting
     [ExpectedException(typeof(ArgumentOutOfRangeException))]
     public void TestMethod3()
     {
-        IsLeap(1582 - 1);
+        IsMillenial(1582 - 1);
     }
 
     [TestMethod]
     public void TestMethod4()
     {
-        Assert.IsFalse(IsLeap(1582));
+        Assert.IsFalse(IsMillenial(1582));
     }
 
     [TestMethod]
     public void TestMethod5()
     {
-        Assert.IsFalse(IsLeap(1582 + 1)); // Also 1584 - 1
+        Assert.IsFalse(IsMillenial(1582 + 1));
     }
-
+    
     // ##################################################################### //
-    // ################## BOUNDARY: 1584 (DIVISIBLE BY 4) ################## //
+    // ######## BOUNDARY: 1981 (LOWER BOUND OF MILLENIAL GENERATION) ####### //
     // ##################################################################### //
 
     [TestMethod]
     public void TestMethod6()
     {
-        Assert.IsTrue(IsLeap(1584));
+        Assert.IsFalse(IsMillenial(1981 - 1));
     }
 
     [TestMethod]
     public void TestMethod7()
     {
-        Assert.IsFalse(IsLeap(1584 + 1));
+        Assert.IsTrue(IsMillenial(1981));
     }
-
-    // ##################################################################### //
-    // ################# BOUNDARY: 1600 (DIVISIBLE BY 400) ################# //
-    // ##################################################################### //
 
     [TestMethod]
     public void TestMethod8()
     {
-        Assert.IsFalse(IsLeap(1600 - 1));
+        Assert.IsTrue(IsMillenial(1981 + 1));
     }
+
+
+    // ##################################################################### //
+    // ######## BOUNDARY: 1996 (UPPER BOUND OF MILLENIAL GENERATION) ####### //
+    // ##################################################################### //
 
     [TestMethod]
     public void TestMethod9()
     {
-        Assert.IsTrue(IsLeap(1600));
+        Assert.IsTrue(IsMillenial(1996 - 1));
     }
 
     [TestMethod]
     public void TestMethod10()
     {
-        Assert.IsFalse(IsLeap(1600 + 1));
+        Assert.IsTrue(IsMillenial(1996));
     }
-
-    // ##################################################################### //
-    // ################# BOUNDARY: 1700 (DIVISIBLE BY 100) ################# //
-    // ##################################################################### //
 
     [TestMethod]
     public void TestMethod11()
     {
-        Assert.IsFalse(IsLeap(1700 - 1));
-    }
-
-    [TestMethod]
-    public void TestMethod12()
-    {
-        Assert.IsFalse(IsLeap(1700));
-    }
-
-    [TestMethod]
-    public void TestMethod13()
-    {
-        Assert.IsFalse(IsLeap(1700 + 1));
+        Assert.IsTrue(IsMillenial(1996 + 1));
     }
 
     // ##################################################################### //
@@ -120,16 +105,17 @@ public partial class LeapTesting
     // ##################################################################### //
 
     [TestMethod]
-    public void TestMethod14()
+    public void TestMethod12()
     {
-        Assert.IsFalse(IsLeap(int.MaxValue - 1));
+        Assert.IsFalse(IsMillenial(int.MaxValue - 1));
     }
 
     [TestMethod]
-    public void TestMethod15()
+    public void TestMethod13()
     {
-        Assert.IsFalse(IsLeap(int.MaxValue));
+        Assert.IsFalse(IsMillenial(int.MaxValue));
     }
 
     // Your code ends here
+
 }
